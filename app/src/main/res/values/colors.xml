@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="primary_bgcolor" type="color">#1e0e56</item>
+    <item name="login" type="color">#a02b2a</item>
+    <item name="login_text" type="color">#efffec</item>
+    <item name="title_color" type="color">#efffec</item>
+    <item name="email_text" type="color">#b3df13</item>
+    <item name="psw_text" type="color">#b3df13</item>
+    <item name="login_here_text" type="color">#b3df13</item>
+
+
+    <item name="contact_bgcolor" type="color">#b3df13</item>
+    <item name="contact_text" type="color">#1c0ba0</item>
+
+</resources>
