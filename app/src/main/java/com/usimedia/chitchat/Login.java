@@ -63,7 +63,7 @@ public class Login extends AppCompatActivity {
                @Override
         protected void onPostExecute(Result result) {
             super.onPostExecute(result);
-            String message = result.getResponse() ? "Success" : "Failed";
+            String message = result.getResponse() ? "Successfully loggedin" : "Failedto login ";
             Toast.makeText(Login.this, message, Toast.LENGTH_LONG).show();
 
                    if(result.getResponse())
@@ -79,11 +79,11 @@ public class Login extends AppCompatActivity {
         protected Result doInBackground(LoginModel... loginModels) {
             LoginModel loginModel = loginModels[0];
 
-            String url="http://192.168.2.177:8000/login";
+            String url="http://192.168.1.13:8000/login";
 
             RequestBody body = new FormBody.Builder()
                     .add("email",loginModel.getEmail())
-                    .add("password",loginModel.getPassword())
+                    .add("password", loginModel.getPassword())
                     .build();
 
             Result result =  request(url, body);

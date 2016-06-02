@@ -9,7 +9,7 @@
     <item name="login_here_text" type="color">#b3df13</item>
 
 
-    <item name="contact_bgcolor" type="color">#b3df13</item>
-    <item name="contact_text" type="color">#1c0ba0</item>
+    <item name="contact_bgcolor" type="color">#212ca0</item>
+    <item name="contact_text" type="color">#13cb08</item>
 
 </resources>

@@ -18,14 +18,14 @@ class loginController extends Controller{
 		$password=$request->Input('password');
 		Log::info("user with email ".$email." trying to login");
 
-		$var=DB::table('tbl_users')->where('email',$email)->where('password',$password)->value('phone_no');
+		$var=DB::table('user_table')->where('email',$email)->where('password',$password)->value('name');
 
 		$result['response']=false;
 
 		if(isset($var))
 		{
 			$result['response']=true;
-			$result['phone_no']=$var;
+			$result['name']=$var;
 			Log::info("Authentication passed");
 		}
 		else
@@ -33,6 +33,7 @@ class loginController extends Controller{
 			Log::info("Authentication Failed");
 		}
 		return response()->json($result);
+
 	}
 }
 ?>

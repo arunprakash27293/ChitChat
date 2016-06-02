@@ -15,3 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::post('/login','loginController@loginfun');
+Route::post('api/contacts','Contacts@resolvecontacts');
