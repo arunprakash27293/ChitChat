@@ -21,7 +21,7 @@ class Contacts extends Controller
 		
 			//$c=count($phone_no);
 			$contact=DB::table('user_table')
-				->select('name','status','last_seen')
+				->select('name','status','lastseen')
 				->whereIn('phone_no',$phone_no)
 				->get();
 				$result =[];
