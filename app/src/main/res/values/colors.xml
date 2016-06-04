@@ -12,4 +12,7 @@
     <item name="contact_bgcolor" type="color">#212ca0</item>
     <item name="contact_text" type="color">#13cb08</item>
 
+    <item name="profile_color" type="color">#1e0e56</item>
+
+
 </resources>

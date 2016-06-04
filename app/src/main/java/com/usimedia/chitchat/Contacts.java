@@ -1,6 +1,7 @@
 package com.usimedia.chitchat;
 
 import android.content.ContentResolver;
+import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -10,6 +11,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -133,6 +136,7 @@ public class Contacts extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacts);
 
+
         contactListView = (ListView) findViewById(R.id.contactlist);
 
         ContentResolver contentResolver = getContentResolver();
@@ -174,12 +178,15 @@ public class Contacts extends AppCompatActivity {
         String[] numbersBuffer = new String[distinctNumbers.size()];
 
         new contactResolverTask().execute(distinctNumbers.toArray(numbersBuffer));
+
+
     }
 
-    private void setValuesToUiListView(List<ChatContact> elements) {
+    private void setValuesToUiListView(final List<ChatContact> elements) {
 
 
         //converting list to array for sending the element parameter to ChatContactListAdapter Constructor parameter Chatcontact[]===> so this array in setValuesUiListView parameter in List so we are converting list to array
+
 
         ChatContact[] numBuffer = new ChatContact[elements.size()];
         final ArrayAdapter<ChatContact> chatContactListAdapter = new ChatContactListAdapter
@@ -188,6 +195,17 @@ public class Contacts extends AppCompatActivity {
                     elements.toArray(numBuffer)
                 );
         contactListView.setAdapter(chatContactListAdapter);
+
+        contactListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+
+                Intent contactprofile = new Intent(Contacts.this,ContactProfile.class);
+                //startActivity(contactprofile);
+                contactprofile.putExtra("chatname",elements.get(position));
+                startActivity(contactprofile);
+            }
+        });
     }
 
 
@@ -219,4 +237,5 @@ public class Contacts extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }

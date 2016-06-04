@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.usimedia.chitchat" >
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-
-
 
     <application
         android:allowBackup="true"
@@ -15,7 +14,6 @@
         <activity
             android:name=".Login"
             android:label="@string/app_name" >
-
         </activity>
         <activity
             android:name=".Contacts"
@@ -25,6 +23,10 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".ContactProfile"
+            android:label="@string/title_activity_contact_profile" >
         </activity>
     </application>
 

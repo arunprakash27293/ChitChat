@@ -12,6 +12,7 @@
     <string name="title_activity_contacts">Contacts</string>
     <string name="search_number">Enter the Number</string>
     <string name="search_button">Search</string>
+    <string name="title_activity_contact_profile">ContactProfile</string>
 
 
 

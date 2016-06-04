@@ -66,8 +66,8 @@ public class LocalContact extends  SQLiteOpenHelper {
         SQLiteDatabase db= getWritableDatabase();
         cv.put(EMAIL.getName(),contact.getEmail());
         cv.put(STATUS.getName(),contact.getStatus());
-        //cv.put(LASTSEEN.getName(),dateFormat.format(contact.setLastseen()));
-        cv.put(LASTSEEN.getName(),dateFormat.format(contact.setLastseen()));
+
+        cv.put(LASTSEEN.getName(),dateFormat.format(contact.getLastseen()));
         cv.put(NAME.getName(),contact.getName());
         db.insert(TABLE_NAME,null,cv);
 
