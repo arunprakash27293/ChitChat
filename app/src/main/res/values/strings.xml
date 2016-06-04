@@ -13,6 +13,10 @@
     <string name="search_number">Enter the Number</string>
     <string name="search_button">Search</string>
     <string name="title_activity_contact_profile">ContactProfile</string>
+    <string name="menu1_id">Menu1</string>
+    <string name="menu2_id">Menu2</string>
+
+
 
 
 

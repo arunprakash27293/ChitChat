@@ -3,5 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.usimedia.chitchat.ContactProfile">
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
-        android:orderInCategory="100" app:showAsAction="never" />
+        android:orderInCategory="100" app:showAsAction="never" >
+        <menu>
+            <item android:id="@+id/name1"
+                  android:title="@string/menu1_id" />
+            <item android:id="@+id/name2"
+                android:title="@string/menu2_id" />
+        </menu>
+    </item>
 </menu>

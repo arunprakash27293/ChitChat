@@ -79,7 +79,7 @@ public class Login extends AppCompatActivity {
         protected Result doInBackground(LoginModel... loginModels) {
             LoginModel loginModel = loginModels[0];
 
-            String url="http://192.168.2.177:8000/login";
+            String url="http://192.168.1.13:8000/login";
 
             RequestBody body = new FormBody.Builder()
                     .add("email",loginModel.getEmail())

@@ -42,7 +42,7 @@ import okhttp3.Response;
 
 public class Contacts extends AppCompatActivity {
 
-    private static final String CONTACTS_SERVICE_URL = "http:192.168.2.177:8000/api/contacts";
+    private static final String CONTACTS_SERVICE_URL = "http:192.168.1.13:8000/api/contacts";
     private static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
     private static final OkHttpClient HTTP_CLIENT = new OkHttpClient();
 
